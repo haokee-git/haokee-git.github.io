@@ -16,7 +16,7 @@
         <link rel="prev" href="../basic/">
       
       
-        <link rel="next" href="../../data-structure/monotonic-queue/">
+        <link rel="next" href="../bag-dp/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -646,10 +646,40 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写分治
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bag-dp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    背包类型动态规划
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1190,6 +1220,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何写分治
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1224,7 +1263,7 @@
 <p>从结果 <span class="arithmatex">\(f(n)\)</span> 出发，我们知道 <span class="arithmatex">\(f(i)=f(i-1)+f(i-2)\)</span>，那么我们只需要照着这个式子进行推导就行了，时间复杂度 <span class="arithmatex">\(\mathcal O(2^n)\)</span>。</p>
 <p>是什么导致了如此高的复杂度呢？其实就是因为同一个 <span class="arithmatex">\(f(i)\)</span> 会求解多次，而其实他们的值是固定的，因此我们就使用一个数组，存下 <span class="arithmatex">\(f(i)\)</span>，这样子就可以在需要重复调用的时候直接调用之前的解，达到了“记忆化”的效果。</p>
 <p>这种方法每一个状态只会访问一次，而状态的数量有 <span class="arithmatex">\(n\)</span> 个，这种算法的时间复杂度就降到了 <span class="arithmatex">\(\mathcal O(n)\)</span>。</p>
-<details class="example">
+<details class="success">
 <summary>代码</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Java</label></div>
 <div class="tabbed-content">
@@ -1258,6 +1297,16 @@
 </div>
 </div>
 </details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>分治需要从结束状态开始，然后不断向前遍历，最后往后回滚。这种思路是反向的，只有这样子才能保证记忆化数组的最优。</p>
+</details>
+<h2 id="_4">如何写分治</h2>
+<p>如何写出一个完美的分治？</p>
+<ul>
+<li>把状态和转移方程列出来，然后照着建模、写出 dfs 函数；</li>
+<li>首先写一个从结束状态开始的 dfs，然后加上记忆化。</li>
+</ul>
 
 
 
