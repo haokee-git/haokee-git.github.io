@@ -715,6 +715,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      01 背包
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      完全背包
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重背包
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多重背包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      暴力拆分法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      二进制拆分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      单调队列优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1307,6 +1367,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#01" class="md-nav__link">
+    <span class="md-ellipsis">
+      01 背包
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      完全背包
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      多重背包
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多重背包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      暴力拆分法
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      二进制拆分
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      单调队列优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1394,6 +1514,102 @@
 <summary>注意</summary>
 <p>压数组有一定局限性，而滚动数组是只要只访问了上一层的状态就可以使用。</p>
 </details>
+<h2 id="01">01 背包</h2>
+<p>01 背包是一种每一个物品只能选择一次的背包问题，其实我们刚才的拼数问题就是一个 01 背包，只不过没有价值而已。而在 01 背包当中，大部分都是需要求最大或是最小价值的。别担心，引入了价值之后题目也会非常简单。</p>
+<details class="note" open="open">
+<summary>01 背包问题</summary>
+<p>给出 <span class="arithmatex">\(n\)</span> 个物品，第 <span class="arithmatex">\(i\)</span> 个物品需要花费 <span class="arithmatex">\(w_i\)</span> 的钱，但是可以获得 <span class="arithmatex">\(v_i\)</span> 的价值。现在你带了 <span class="arithmatex">\(m\)</span> 元，问你在使用不超过 <span class="arithmatex">\(m\)</span> 元的情况下，最多可以获得多少的价值。</p>
+</details>
+<p>十分简单，还是设 <span class="arithmatex">\(f(i,j)\)</span> 表示为选择了前 <span class="arithmatex">\(i\)</span> 个物品，使用了 <span class="arithmatex">\(j\)</span> 的钱，但是附带属性从原来的“是否能够满足”变成了“最大价值”。也非常简单，每一个物品都有选或不选的决策，如果不选，那么答案很显然就是 <span class="arithmatex">\(f(i-1,j)\)</span>；如果选，那么使用的钱数就变更为没有选当前物品的钱数，也就是 <span class="arithmatex">\(j-w_i\)</span>，然后将价值加上 <span class="arithmatex">\(v_i\)</span>，取最大值即可。也就是 <span class="arithmatex">\(f(i,j)=\max(f(i-1,j),f(i-1,j-w_i)+v_i)\)</span>。</p>
+<p>很显然，由于遍历 <span class="arithmatex">\(j\)</span> 时只会访问上一层状态 <span class="arithmatex">\(\le j\)</span> 的部分，那么我们同样可以使用“压数组”的方法对 dp 的空间进行优化。</p>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>在代码中，我们并没有设定边界状态和初始化 dp 数组，这是因为题目中并不需要完全花完 <span class="arithmatex">\(m\)</span> 元，也就意味着我们可以“浪费”一些钱。而浪费 <span class="arithmatex">\(j\)</span> 元，<span class="arithmatex">\(f(j)\)</span> 就等于 <span class="arithmatex">\(0\)</span>，因此不用去可以设定初始状态，但是在其他的题目中一定要仔细审题，看清楚到底要不要设置初始状态。</p>
+</details>
+<details class="note">
+<summary>01 背包代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details class="note">
+<summary>加入压数组优化</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="_6">完全背包</h2>
+<p>完全背包，就是每一个物品可以选择无线次，其他信息没有变。</p>
+<p>由于每一个物品可以选择无限次，那么我们不仅需要遍历上一层的状态，还需要遍历当前层的状态。不过，在压数组的时候，为了避免重复选择，我们就让 <span class="arithmatex">\(j\)</span> 倒序枚举，而这里正好可以取无限次，那么我们就可以利用这个小特性进行操作。</p>
+<p>这个特性的原理是保存了当前层状态和上一层状态的最优值，那么遍历时就可以同时从上一层和当前层进行转移。很明显，由于它们两个状态都是一样的 <span class="arithmatex">\(j\)</span>，那么只需要保留最大值就行了。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="_7">多重背包</h2>
+<details class="note" open="open">
+<summary>多重背包问题</summary>
+<p>有 <span class="arithmatex">\(n\)</span> 个物品，第 <span class="arithmatex">\(i\)</span> 件物品需要 <span class="arithmatex">\(w_i\)</span> 元，可以获得 <span class="arithmatex">\(v_i\)</span> 的价值，但是只有 <span class="arithmatex">\(c_i\)</span> 的数量。问你在花不超过 <span class="arithmatex">\(m\)</span> 元的前提条件下最多可以获得多少的价值。</p>
+</details>
+<h3 id="_8">暴力拆分法</h3>
+<p>对于每一个物品，直接看做 <span class="arithmatex">\(c_i\)</span> 个只能选一次的物品，然后暴力 01 背包就行了。时间复杂度 <span class="arithmatex">\(\mathcal O(nm\sum\limits_{i=1}^{n}{c_i})\)</span>。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">k</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h3 id="_9">二进制拆分</h3>
+<p>对于拆分的题目，我们很容易想到二进制。对于一个数 <span class="arithmatex">\(x\)</span>，我们可以使用 <span class="arithmatex">\(\log_2 x\)</span> 个二的 <span class="arithmatex">\(n\)</span> 次幂的数来拼凑出 <span class="arithmatex">\(x\)</span>，因此我们就对 <span class="arithmatex">\(c_i\)</span> 进行拆分，将一件物品拆分成 <span class="arithmatex">\(\log_2 c_i\)</span> 件小物品。时间复杂度 <span class="arithmatex">\(\mathcal O(nm\sum\limits_{i=1}^{n}\log_2 c_i)\)</span>。</p>
+<p>注意拆分完后面的余数需要进行特殊处理，我这里使用了取最小值来进行处理。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">),</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w"> </span><span class="n">k</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h3 id="_10">单调队列优化</h3>
+<p>我们知道，如果是正向转移的话，那么 <span class="arithmatex">\(dp_j\)</span> 就可以转移到 <span class="arithmatex">\(dp_{(j+k\times w_i)}\)</span>，那么我们就枚举 <span class="arithmatex">\(j\)</span>，然后枚举 <span class="arithmatex">\(k\)</span>，接着使用一个单调队列存储可用的最大值，然后进行转移。我们这里限制了单调队列的转移长度 <span class="arithmatex">\(\min(\lfloor\cfrac{m}{w_i}\rfloor,c_i)\)</span>，超出就退出。由于第二三重循环正好枚举了 <span class="arithmatex">\(m\)</span> 次，因此这种方法的实现复杂度是 <span class="arithmatex">\(\mathcal O(nm)\)</span> 的，十分优秀。</p>
+<p>不过这种算法已经超出了 NOIp 的范围了，而且很难理解，因此在实际使用中往往会使用二进制拆分。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举 n 个数</span>
+<span class="w">  </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span><span class="w">   </span><span class="c1">// 计算极限值，超出了无意义</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">              </span><span class="c1">// 枚举偏移</span>
+<span class="w">    </span><span class="n">q</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w">                                   </span><span class="c1">// 清空队列</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="p">(</span><span class="n">m</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举选择 k 个</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">       </span><span class="c1">// 计算答案</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop_front</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// 将队头无用的去掉</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">()</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">back</span><span class="p">().</span><span class="n">second</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop_back</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">         </span><span class="c1">// 将队尾更劣的去掉</span>
+<span class="w">      </span><span class="n">q</span><span class="p">.</span><span class="n">emplace_back</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w">                                              </span><span class="c1">// 入队</span>
+<span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span><span class="w">                    </span><span class="c1">// 取最优的答案转移</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>这就是背包类型动态规划的几类经典问题，虽然在竞赛中形式多变，但基本上都是换汤不换药，只要掌握解题的方法就可以迎刃而解。</p>
 
 
 
