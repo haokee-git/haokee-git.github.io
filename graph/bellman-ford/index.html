@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/start/configure/">
+        <link rel="canonical" href="https://haokee-git.github.io/graph/bellman-ford/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../storage/">
       
       
-        <link rel="next" href="../first-program/">
+        <link rel="next" href="../johnson/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>配置环境 - haokee-wiki</title>
+        <title>Bellman-Ford 算法 - haokee-wiki</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#bellman-ford" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              配置环境
+              Bellman-Ford 算法
             
           </span>
         </div>
@@ -232,13 +232,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../start/configure/" class="md-tabs__link">
           
   
   进入 OI 的海洋
@@ -297,17 +295,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   图论
@@ -435,8 +437,6 @@
       
   
   
-    
-  
   
   
     
@@ -447,12 +447,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -466,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             进入 OI 的海洋
@@ -477,30 +479,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    配置环境
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../start/configure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,68 +491,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ide" class="md-nav__link">
-    <span class="md-ellipsis">
-      编译器、编辑器和 IDE
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="编译器、编辑器和 IDE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      编译器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      编辑器
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ide_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      IDE（集成开发环境）
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -583,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-program/" class="md-nav__link">
+      <a href="../../start/first-program/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -858,8 +778,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -868,14 +790,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -889,7 +809,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -942,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,21 +909,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1017,7 +937,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             最短路径
@@ -1028,10 +948,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bellman-Ford 算法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1040,6 +980,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是松弛操作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法思想
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      判断负环
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spfa" class="md-nav__link">
+    <span class="md-ellipsis">
+      队列优化（SPFA）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1052,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,44 +1375,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ide" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      编译器、编辑器和 IDE
+      什么是松弛操作
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="编译器、编辑器和 IDE">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      编译器
+      算法思想
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      编辑器
+      判断负环
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ide_1" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#spfa" class="md-nav__link">
     <span class="md-ellipsis">
-      IDE（集成开发环境）
+      队列优化（SPFA）
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1439,17 +1429,83 @@
   
 
 
-<h1 id="_1">配置环境</h1>
-<h2 id="ide">编译器、编辑器和 IDE</h2>
-<h3 id="_2">编译器</h3>
-<p>我们知道，计算机的处理方式是二进制，那么我们的机器码也是二进制的，只有机器码才可以让计算机做出事情。但是，机器码它反人类啊！你想一想，光是让计算机执行一个加法就需要好多代码，因为计算机只能对位进行具体的操作，因此我们肯定是不可能直接写机器码的。</p>
-<p>因此，后人开发了汇编语言，这种语言使用了很多英文符号，把英文符号转化为对应的二进制机器码就可以让计算机运行。但是汇编语言及其复杂，只是写起来简单一些，但是代码仍然很长。</p>
-<p>这时，高级语言就出现了，如：C/C++、Python、Java、C#……这种语言的代码构成就很简单了，而运行的方式就是需要一个翻译器，把代码翻译成机器码。一般有编译式和解释式，编译式就是直接编译成机器码，然后输出文件，最后点击文件就可以直接运行了；解释式就是相当于运行时逐句翻译，可以更好地面对运行时的错误，但是牺牲了速度。</p>
-<p>信息学奥赛一般使用 C/C++，这是一种编译式语言。相关的编译器有：GNU、LLVM、MSVC 这三种，可以根据自身情况选择。</p>
-<h3 id="_3">编辑器</h3>
-<p>编辑器就是专门用来编辑代码的，可以在里面获得更好地打代码体验。当然，如果你是巨佬也可以直接在记事本里面打代码。不过，编辑器一般都配备有：语法补全、代码高亮等。这每一项拎出来都是暴打记事本的存在。</p>
-<h3 id="ide_1">IDE（集成开发环境）</h3>
-<p>就是集成了编译器、编辑器等等玩意的一个软件，很好使用、不需要过多的配置，反正就是很省心，装这个就对了。</p>
+<h1 id="bellman-ford">Bellman-Ford 算法</h1>
+<p>Ballman-Ford 算法是一种基于松弛操作来求单源最短路的的算法，可以求出有复权的图，并且可以判断从源点开始能否可以到达一个负环。</p>
+<h2 id="_1">什么是松弛操作</h2>
+<p>假设 <span class="arithmatex">\(d(x)\)</span> 表示为源点到 <span class="arithmatex">\(x\)</span> 的最短路径长度，那么很显然若源点为 <span class="arithmatex">\(1\)</span>，那么 <span class="arithmatex">\(d(1)=0\)</span>。现在我们找到了一条边 <span class="arithmatex">\((u,v)\)</span>，那么 <span class="arithmatex">\(d(v)=\min(d(v),d(u)+w(u,v))\)</span>。因为我们把 <span class="arithmatex">\(1-u\)</span> 的路径眼神到了 <span class="arithmatex">\(1-v\)</span>，那么值自然就需要加上 <span class="arithmatex">\(w(u,v)\)</span>，但是这不一定是最短的，因此我们需要取最小值。</p>
+<p>为什么呢？接下来我介绍一个十分脑残的定理：假设 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 的最短路径经过的点的序列为 <span class="arithmatex">\(a\)</span>，那么对于 <span class="arithmatex">\(a\)</span> 的任意一个子串 <span class="arithmatex">\(b\)</span>，<span class="arithmatex">\(b_1\)</span> 到 <span class="arithmatex">\(b_{\mid b\mid}\)</span> 的路径也必定是最优的。因此，我们知道了一条最短路径是可以由两条同样最短的路径给拼起来的。</p>
+<h2 id="_2">算法思想</h2>
+<p>Bellman-Ford 做的其实就是不断地进行松弛操作。我们知道，一条最短路经过的边的数量最多为 <span class="arithmatex">\(n-1\)</span>，而松弛操作每一次能够给最短路径多贡献一条边，那么我们就需要枚举 <span class="arithmatex">\(n-1\)</span> 次松弛操作，然后枚举所有的边，进行松弛操作。经过了 <span class="arithmatex">\(n-1\)</span> 次松弛操作之后，源点到任意结点的最短路经就找到了。</p>
+<p>算法时间复杂度为 <span class="arithmatex">\(\mathcal O(nm)\)</span>，但是在松弛过程中如果已经没有可以松弛的点了，我们就退出松弛操作，进行一点点时间上的优化。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bellmanFord</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="_3">判断负环</h2>
+<p>我们知道，当最短路经过了一个负环，他就会一直绕在哪里，因为边权是负的，一直转就可以获得更优的答案。在 Bellman-Ford 中，如果经过了 <span class="arithmatex">\(n-1\)</span> 次松弛操作之后还可以进行松弛，那么就说明从源点开始能够到达一个负环。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">bellmanFord</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">d</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]],</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">m</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">u</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="mi">-1</span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<h2 id="spfa">队列优化（SPFA）</h2>
+<p>在大多数情况下我们并不需要那么多的松弛操作，因此我们可以选择使用一个队列用来记录那些点需要进行松弛操作。观察代码，很显然，之后被松弛的结点所连接的邻点才需要再次进行松弛操作，因此代码就很显然了。</p>
+<p>最优情况下每一个点只松弛一次，时间复杂度是 <span class="arithmatex">\(\mathcal O(n+m)\)</span> 的，但是最坏情况下直接跟 Bellman-Ford 到了 <span class="arithmatex">\(\mathcal O(nm)\)</span>，这也就是为什么能用 Dijkstra 就尽量不用 SPFA 的原因。尽管大家为 SPFA 提出了许多其他的优化，但是还是可以被毒瘤出题人给卡，有些优化甚至可以达到指数级！因此使用 SPFA 的时候一定需要看清楚数据范围。</p>
+<p>注意 SPFA 不想 Bellman-Ford 限制了松弛次数，如果遇到了负环还是会死循环的，因此我们需要使用一个数组来记录入队次数，如果入队次数超过了 <span class="arithmatex">\(n\)</span>，那么就说明找到了负环。</p>
+<details class="warning" open="open">
+<summary>特别注意</summary>
+<p>如果出现了重边，那么松弛操作数量可能超过 <span class="arithmatex">\(n-1\)</span>，这是我们就需要判断入队次数而不是松弛次数，不然可能会被 Hack。这也是一个高频易错点。</p>
+<p>有的人活着，他已经死了。——臧克家</p>
+</details>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">spfa</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">();</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">t</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">v</span><span class="p">;</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}</span>
+<span class="w">          </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">          </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
 
 
 
