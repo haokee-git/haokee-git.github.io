@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/start/first-program/">
+        <link rel="canonical" href="https://haokee-git.github.io/graph/dijkstra/">
       
       
-        <link rel="prev" href="../configure/">
+        <link rel="prev" href="../bellman-ford/">
       
       
-        <link rel="next" href="../../dp/basic/">
+        <link rel="next" href="../floyd/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>第一个程序 - haokee-wiki（新年特别版）</title>
+        <title>Dijkstra 算法 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#dijkstra" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第一个程序
+              Dijkstra 算法
             
           </span>
         </div>
@@ -232,13 +232,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../configure/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../start/configure/" class="md-tabs__link">
           
   
   进入 OI 的海洋
@@ -297,17 +295,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   图论
@@ -435,8 +437,6 @@
       
   
   
-    
-  
   
   
     
@@ -447,12 +447,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -466,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             进入 OI 的海洋
@@ -480,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure/" class="md-nav__link">
+      <a href="../../start/configure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,30 +500,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    第一个程序
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../start/first-program/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,68 +512,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      你好，世界
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你好，世界">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C++
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      思考
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -858,8 +778,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -868,14 +790,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -889,7 +809,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -942,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,21 +909,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1017,7 +937,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             最短路径
@@ -1031,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+      <a href="../bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,10 +969,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../graph/dijkstra/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dijkstra 算法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1061,6 +1001,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法思想
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1073,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/floyd/" class="md-nav__link">
+      <a href="../floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/mst/" class="md-nav__link">
+      <a href="../mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1204,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/kruskal/" class="md-nav__link">
+      <a href="../kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,44 +1497,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      你好，世界
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你好，世界">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C++
+      算法思想
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      思考
+      代码
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1570,47 +1542,75 @@
   
 
 
-<h1 id="_1">第一个程序<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">你好，世界<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在第一个程序中，为了检测我们的配置是否可行，一般都输出 <code>Hello world!</code>。这象征着你打开了一个新的世界，仿佛在向这个新的世界问好一般。</p>
-<p>在 C++ 当中，我们可以使用 <code>cout</code> 命令进行输出。接下来，就让我们打开编辑器或 IDE，开始向电脑问好吧！</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">C</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<h1 id="dijkstra">Dijkstra 算法<a class="headerlink" href="#dijkstra" title="Permanent link">&para;</a></h1>
+<details class="quote" open="open">
+<summary>Quote</summary>
+<p>迪杰斯特拉算法 （Dijkstra）是由荷兰计算机科学家狄克斯特拉于 <span class="arithmatex">\(1959\)</span> 年提出的，因此又叫狄克斯特拉算法。是从一个顶点到其余各顶点的最短路径算法，解决的是有权图中最短路径问题。迪杰斯特拉算法主要特点是从起始点开始，采用贪心算法的策略，每次遍历到始点距离最近且未访问过的顶点的邻接节点，直到扩展到终点为止。<sup id="fnref:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup></p>
+</details>
+<h2 id="_1">引入<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>首先，我们一下就可以想到一个暴搜：我们用 BFS 搜索每一个点，然后往外拓展，如果发现了更优那么就进入队列。但是，这种算法的时间复杂度非常高，而且我们可以发现每一个点进入队列的时候其实当时的距离不一定是最优的，但是后面获得了更优的值，因此这一个点就会重复进入队列，然后再更新一遍，因此时间复杂度非常高。</p>
+<h2 id="_2">算法思想<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>我们能够采取一些优化。对于非负权图，我们可以发现每一次的转移都是优不断转移到更劣的，因此我们只需要每一次都找到最优的状态，然后将这个点转移到后面，也就是更劣的状态。这里我们就利用了路径长度这个递增的拓扑序来求解了最短路问题，时间复杂度为 <span class="arithmatex">\(\mathcal O(n^2)\)</span>。</p>
+<p>但是我们发现，其实没有必要每一次都花费 <span class="arithmatex">\(\mathcal O(n)\)</span> 的时间去找到距离最优的状态，而是采用一个二叉堆进行快速地访问，那么我们找到一个最优的状态的时间复杂度就变成了 <span class="arithmatex">\(\mathcal O(\log_2 n)\)</span>，总时间复杂度就变成了 <span class="arithmatex">\(\mathcal O((n+m)\log_2 n)=\mathcal O(m\log_2 n)\)</span>。</p>
+<p>注意 STL 当中的优先队列如果更新了最短路的长度是，那么我们无法删除和更改以前的状态，因此队列的元素数量就变成了 <span class="arithmatex">\(m\)</span> 个，时间复杂度就降到了 <span class="arithmatex">\(\mathcal O(m\log_2 m)\)</span>。其实我们的 set 是可以判断是否存在状态的，但是由于常数过大一般不会使用。</p>
+<details class="note" open="open">
+<summary>注意</summary>
+<p>Dijkstra 只能处理正边权的最短路和负边权的最长路，如果在负边权中求最短路很有可能会死循环或求出错误的答案。如果想要求出负边权图的最短路，请转去隔壁看 <a href="../bellman-ford/">Bellman-Ford 算法</a>。</p>
+</details>
+<details class="warning" open="open">
+<summary>警告</summary>
+<p>在稠密图当中，<span class="arithmatex">\(m\)</span> 可能近似于 <span class="arithmatex">\(n^2\)</span>，这时使用堆优化 Dijkstra 的时间复杂度会达到 <span class="arithmatex">\(\mathcal O(n^2\log_2 n)\)</span>（或 <span class="arithmatex">\(\mathcal O(n^2\log_2 n^2~)\)</span>），比朴素 Dijkstra 的 <span class="arithmatex">\(\mathcal O(n^2~)\)</span> 要劣。</p>
+</details>
+<h2 id="_3">代码<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<details class="note">
+<summary>朴素算法</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dijkstra</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">mn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e9</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">f</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mn</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">mn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">f</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">t</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">j</span><span class="p">.</span><span class="n">to</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">j</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">v</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</details>
+<details class="note">
+<summary>使用优先队列优化</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dijkstra</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Node</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">f</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">to</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">v</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ref1">
+<p>来自百度百科，进行了一定处理。&#160;<a class="footnote-backref" href="#fnref:ref1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
-</div>
-</div>
-<h3 id="c">对于 C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
-<ul>
-<li>第一行：我们使用了一个宏命令 <code>include</code>，宏命令前面需要加 <code>#</code>。我们这里包含了系统头文件 <code>iostream</code>，用尖括号包括起来。这句话的意思是我们引用、包含了这个头文件。这个头文件在 C++ 当中是用来进行输入输出的。</li>
-<li>第二行：这里是空行，在宏命令和其他语句之间空上一行是好习惯。</li>
-<li>第三行：这里我们使用了一个名字空间 <code>std</code>，顾名思义，也就是标准名字空间，C++ 定义的很多函数为了不与其他函数重名，因此统统塞进了名字空间里面。</li>
-<li>第四行：这里是空行，<code>using</code> 语句空行是一个好习惯。</li>
-<li>第五行：<code>int main()</code> 表示这是一个主函数，也就是程序开始执行的地方，<code>int</code> 表示返回值类型，这里是整数（integer）的意思，当程序正常是就返回 <span class="arithmatex">\(0\)</span>。函数里面的语句使用大括号括起来。</li>
-<li>第六行：<code>cout</code> 是输出一些东西，后面跟着的两个小于号就是流控制符，用来进行输出的。这里用双引号标的就是字符串，表示这里有一个为 <code>Hello world!</code> 的字符串进行输出。<code>endl</code> 就是换行并刷新缓冲区，不要也可以。</li>
-<li>第七行：<code>return</code> 表示返回，这里返回零，表示程序运行正常。</li>
-</ul>
-<h3 id="c_1">对于 C<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
-<p>这是一门已经被 CCF 抛弃了的语言，并且 C++ 兼容 C，你可以在 C++ 里面书写 C。</p>
-<h3 id="_3">思考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>这就是如何输出 <code>Hello world!</code> 的过程。你可以把引号内的字符串更改成任意的样式，都可以输出。快去尝试一下吧！</p>
 
 
 

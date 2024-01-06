@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/start/first-program/">
+        <link rel="canonical" href="https://haokee-git.github.io/graph/floyd/">
       
       
-        <link rel="prev" href="../configure/">
+        <link rel="prev" href="../dijkstra/">
       
       
-        <link rel="next" href="../../dp/basic/">
+        <link rel="next" href="../johnson/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>第一个程序 - haokee-wiki（新年特别版）</title>
+        <title>Floyd 算法 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#floyd" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第一个程序
+              Floyd 算法
             
           </span>
         </div>
@@ -232,13 +232,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../configure/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../start/configure/" class="md-tabs__link">
           
   
   进入 OI 的海洋
@@ -297,17 +295,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   图论
@@ -435,8 +437,6 @@
       
   
   
-    
-  
   
   
     
@@ -447,12 +447,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -466,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             进入 OI 的海洋
@@ -480,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure/" class="md-nav__link">
+      <a href="../../start/configure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,30 +500,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    第一个程序
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../start/first-program/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,68 +512,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      你好，世界
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你好，世界">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C++
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      思考
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -858,8 +778,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -868,14 +790,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -889,7 +809,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -942,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,21 +909,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" checked>
         
           
           <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
@@ -1017,7 +937,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_2">
             <span class="md-nav__icon md-icon"></span>
             最短路径
@@ -1031,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+      <a href="../bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/dijkstra/" class="md-nav__link">
+      <a href="../dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1070,10 +990,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../graph/floyd/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Floyd 算法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1082,6 +1022,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法思想
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      传递闭包
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1094,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/mst/" class="md-nav__link">
+      <a href="../mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1204,7 +1191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/kruskal/" class="md-nav__link">
+      <a href="../kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,44 +1497,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      你好，世界
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你好，世界">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C++
+      算法思想
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      思考
+      传递闭包
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1570,47 +1542,62 @@
   
 
 
-<h1 id="_1">第一个程序<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">你好，世界<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在第一个程序中，为了检测我们的配置是否可行，一般都输出 <code>Hello world!</code>。这象征着你打开了一个新的世界，仿佛在向这个新的世界问好一般。</p>
-<p>在 C++ 当中，我们可以使用 <code>cout</code> 命令进行输出。接下来，就让我们打开编辑器或 IDE，开始向电脑问好吧！</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">C</label></div>
+<h1 id="floyd">Floyd 算法<a class="headerlink" href="#floyd" title="Permanent link">&para;</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p class="annotate">Floyd 算法(1) 是用来求任意两点之间的最短路的，适用于任何无负环等没有最短路的图，并且容易实现，代码短。致命缺点就是复杂度较高，需要 <span class="arithmatex">\(\mathcal O(n^3)\)</span> 的时间复杂度和 <span class="arithmatex">\(\mathcal O(n^2)\)</span> 的空间复杂度。</p>
+<ol>
+<li>Floyd 算法，全名 Floyd-Wallshall，又称为插点法，是一种利用动态规划的思想寻找给定的加权图中多源点之间最短路径的算法，与 Dijkstra 算法类似。该算法名称以创始人之一、<span class="arithmatex">\(1978\)</span> 年图灵奖获得者、斯坦福大学计算机科学系教授罗伯特·弗洛伊德命名。——百度百科</li>
+</ol>
+<h2 id="_2">算法思想<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(dp_{(k,i,j)}\)</span> 表示为最短路在只经过 <span class="arithmatex">\(1~k\)</span> 这 <span class="arithmatex">\(k\)</span> 个中转结点的前提下，<span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的最短距离，那么很简单，<span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的最短距离我们就尝试加入中转结点 <span class="arithmatex">\(k\)</span>，也就是把 <span class="arithmatex">\(i\sim k\)</span> 和 <span class="arithmatex">\(k\sim j\)</span> 的路径给拼起来，然后与当前 <span class="arithmatex">\(i\sim j\)</span> 的路径做比较，取最小值。状态转移方程就是 <span class="arithmatex">\(dp_{(k,i,j)}=\min(dp_{(k-1,i,j)},dp_{(k-1,i,k)}+dp_{(k-1,k,j)})\)</span>。</p>
+<p>然后我们发现，其实每一次我们都从 <span class="arithmatex">\(k-1\)</span> 转移了所有状态到 <span class="arithmatex">\(k\)</span>，那么其实我们可以直接原地修改（压数组），或者按照之前 <a href="../../dp/bag-dp/">动态规划</a> 里面讲解的滚动数组进行优化，那么空间复杂度就可以降成 <span class="arithmatex">\(\mathcal O(n^2)\)</span>。</p>
+<p>注意如果这一个图是双向图的话，那么 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的距离和 <span class="arithmatex">\(j\)</span> 到 <span class="arithmatex">\(i\)</span> 的距离是一样的，因此我们就可以进行优化，省去一半的时间复杂度。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">普通 Floyd</label><label for="__tabbed_1_2">加入压数组优化</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 </div>
 </div>
 </div>
-<h3 id="c">对于 C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
-<ul>
-<li>第一行：我们使用了一个宏命令 <code>include</code>，宏命令前面需要加 <code>#</code>。我们这里包含了系统头文件 <code>iostream</code>，用尖括号包括起来。这句话的意思是我们引用、包含了这个头文件。这个头文件在 C++ 当中是用来进行输入输出的。</li>
-<li>第二行：这里是空行，在宏命令和其他语句之间空上一行是好习惯。</li>
-<li>第三行：这里我们使用了一个名字空间 <code>std</code>，顾名思义，也就是标准名字空间，C++ 定义的很多函数为了不与其他函数重名，因此统统塞进了名字空间里面。</li>
-<li>第四行：这里是空行，<code>using</code> 语句空行是一个好习惯。</li>
-<li>第五行：<code>int main()</code> 表示这是一个主函数，也就是程序开始执行的地方，<code>int</code> 表示返回值类型，这里是整数（integer）的意思，当程序正常是就返回 <span class="arithmatex">\(0\)</span>。函数里面的语句使用大括号括起来。</li>
-<li>第六行：<code>cout</code> 是输出一些东西，后面跟着的两个小于号就是流控制符，用来进行输出的。这里用双引号标的就是字符串，表示这里有一个为 <code>Hello world!</code> 的字符串进行输出。<code>endl</code> 就是换行并刷新缓冲区，不要也可以。</li>
-<li>第七行：<code>return</code> 表示返回，这里返回零，表示程序运行正常。</li>
-</ul>
-<h3 id="c_1">对于 C<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
-<p>这是一门已经被 CCF 抛弃了的语言，并且 C++ 兼容 C，你可以在 C++ 里面书写 C。</p>
-<h3 id="_3">思考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>这就是如何输出 <code>Hello world!</code> 的过程。你可以把引号内的字符串更改成任意的样式，都可以输出。快去尝试一下吧！</p>
+</details>
+<h2 id="_3">传递闭包<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<details class="question" open="open">
+<summary>问题</summary>
+<p>给出一个图和若干个询问，每一个询问都问你指定两点能否直接或间接到达。</p>
+</details>
+<p>我们还是采用 Floyd 的思想，把最短路数组改成 <code>bool</code> 数组，如果 <span class="arithmatex">\(i\)</span> 和 <span class="arithmatex">\(j\)</span> 可以到达，那么 <span class="arithmatex">\(dp_{(i,j)}=1\)</span>，然后把 Floyd 的取最小值改成逻辑或运算就行了。</p>
+<p>事实上，我们还可以使用 <code>std::bitset</code> 进行优化，然后对一整个数组全部进行或运算，那么时间复杂度就变成了 <span class="arithmatex">\(\mathcal O(\cfrac{n^3}{w})\)</span>。'</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="n">bitset</span><span class="o">&lt;</span><span class="n">kMaxN</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">kMaxN</span><span class="p">];</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
 
 
 

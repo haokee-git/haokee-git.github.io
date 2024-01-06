@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/start/first-program/">
+        <link rel="canonical" href="https://haokee-git.github.io/graph/mst/">
       
       
-        <link rel="prev" href="../configure/">
+        <link rel="prev" href="../system-of-difference-constraints/">
       
       
-        <link rel="next" href="../../dp/basic/">
+        <link rel="next" href="../kruskal/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>第一个程序 - haokee-wiki（新年特别版）</title>
+        <title>定义 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#-" class="md-skip">
           跳转至
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              第一个程序
+              定义
             
           </span>
         </div>
@@ -232,13 +232,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../configure/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../start/configure/" class="md-tabs__link">
           
   
   进入 OI 的海洋
@@ -297,17 +295,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   图论
@@ -435,8 +437,6 @@
       
   
   
-    
-  
   
   
     
@@ -447,12 +447,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -466,7 +468,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             进入 OI 的海洋
@@ -480,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configure/" class="md-nav__link">
+      <a href="../../start/configure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,30 +500,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    第一个程序
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../start/first-program/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,68 +512,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      你好，世界
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你好，世界">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C++
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      思考
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -858,8 +778,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -868,14 +790,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -889,7 +809,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -942,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -963,7 +883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1031,7 +951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+      <a href="../bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1052,7 +972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/dijkstra/" class="md-nav__link">
+      <a href="../dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1073,7 +993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/floyd/" class="md-nav__link">
+      <a href="../floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,21 +1061,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
         
           
           <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
@@ -1169,7 +1089,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_3">
             <span class="md-nav__icon md-icon"></span>
             最小生成树
@@ -1180,10 +1100,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../graph/mst/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1192,6 +1121,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1204,7 +1134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/kruskal/" class="md-nav__link">
+      <a href="../kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,56 +1433,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      你好，世界
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="你好，世界">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#c" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C++
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#c_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于 C
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      思考
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1570,47 +1450,16 @@
   
 
 
-<h1 id="_1">第一个程序<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">你好，世界<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>在第一个程序中，为了检测我们的配置是否可行，一般都输出 <code>Hello world!</code>。这象征着你打开了一个新的世界，仿佛在向这个新的世界问好一般。</p>
-<p>在 C++ 当中，我们可以使用 <code>cout</code> 命令进行输出。接下来，就让我们打开编辑器或 IDE，开始向电脑问好吧！</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">C</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hello world!&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello world!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="c">对于 C++<a class="headerlink" href="#c" title="Permanent link">&para;</a></h3>
-<ul>
-<li>第一行：我们使用了一个宏命令 <code>include</code>，宏命令前面需要加 <code>#</code>。我们这里包含了系统头文件 <code>iostream</code>，用尖括号包括起来。这句话的意思是我们引用、包含了这个头文件。这个头文件在 C++ 当中是用来进行输入输出的。</li>
-<li>第二行：这里是空行，在宏命令和其他语句之间空上一行是好习惯。</li>
-<li>第三行：这里我们使用了一个名字空间 <code>std</code>，顾名思义，也就是标准名字空间，C++ 定义的很多函数为了不与其他函数重名，因此统统塞进了名字空间里面。</li>
-<li>第四行：这里是空行，<code>using</code> 语句空行是一个好习惯。</li>
-<li>第五行：<code>int main()</code> 表示这是一个主函数，也就是程序开始执行的地方，<code>int</code> 表示返回值类型，这里是整数（integer）的意思，当程序正常是就返回 <span class="arithmatex">\(0\)</span>。函数里面的语句使用大括号括起来。</li>
-<li>第六行：<code>cout</code> 是输出一些东西，后面跟着的两个小于号就是流控制符，用来进行输出的。这里用双引号标的就是字符串，表示这里有一个为 <code>Hello world!</code> 的字符串进行输出。<code>endl</code> 就是换行并刷新缓冲区，不要也可以。</li>
-<li>第七行：<code>return</code> 表示返回，这里返回零，表示程序运行正常。</li>
-</ul>
-<h3 id="c_1">对于 C<a class="headerlink" href="#c_1" title="Permanent link">&para;</a></h3>
-<p>这是一门已经被 CCF 抛弃了的语言，并且 C++ 兼容 C，你可以在 C++ 里面书写 C。</p>
-<h3 id="_3">思考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>这就是如何输出 <code>Hello world!</code> 的过程。你可以把引号内的字符串更改成任意的样式，都可以输出。快去尝试一下吧！</p>
+<h1 id="-">最小生成树 - 定义<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
+<details class="note" open="open">
+<summary>提示</summary>
+<p>这里是最小生成树的定义，如果您想要学习最小生成树的算法，请转到下面的 Kruskal 或 Prim 算法。</p>
+</details>
+<p class="annotate">对于一个连通图，如果有一个子图（点集相同，边集被包含）满足树形结构，那么这个子图就是这个图的一棵生成树(1)。生成树的大小定义为所有边的权值之和，最小生成树就是所有生成树的权值之和当中最小的那一棵树。</p>
+<ol>
+<li>英文名为 Spanning Tree。最小生成树的英文名为 Minimum Spanning Tree，简称 MST。</li>
+</ol>
+<p>如果这个图不联通，那么我们可以对每一个联通块（强连通分量）分别求出最小生成树之后合并成一个最小生成森林。</p>
 
 
 
