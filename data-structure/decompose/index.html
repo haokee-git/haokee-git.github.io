@@ -1610,6 +1610,7 @@
 <li>后面的一部分零散的元素。</li>
 </ul>
 <p>照样子模拟操作就行了。注意如果是修改整块的话，我们其实只是在块的属性里面加上了修改的值，实际的内容是没有变的，而以后当修改到这一部分林零散的内容时，就会出错。因此我们可以添加一个标记数组，表示每一个块加上了多少的值，然后统计答案的时候加上就行了。</p>
+<p>最后我们发现，询问和修改的时间复杂度都是 <span class="arithmatex">\(\mathcal O(n+\dfrac{n}{l})\)</span> 的，那么我们需要将这个值最小化。很显然，当 <span class="arithmatex">\(l=\sqrt{n}\)</span> 的时候，也就是 <span class="arithmatex">\(l=\dfrac{n}{l}\)</span> 的时候，时间复杂度是最优的。</p>
 <details class="note">
 <summary>代码</summary>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
