@@ -1,3 +1,17 @@
+@font-face {
+  font-family: "code-font";
+  src: url("JetBrainsMono.ttf");
+}
+
+@font-face {
+  font-family: "p-font";
+  src: url("PingFangSC.ttf");
+}
+
 code {
-  font-family: 'JetBrains Mono', 'Consolas', 'PingFang SC', 'Microsoft YaHei' !important;
+  font-family: "code-font", "p-font" !important;
+}
+
+body {
+  font-family: "p-font" !important;
 }
