@@ -5,7 +5,8 @@
 
 @font-face {
   font-family: "p-font";
-  src: url("PingFangSC.ttf");
+  src: url("PingFangSC.woff2");
+  unicode-range: U+4E00-9FCB, U+0020-02AF;
 }
 
 code {
