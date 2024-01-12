@@ -11,6 +11,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://haokee-git.github.io/algorithm/bin-search-ans/</loc>
+         <lastmod>2024-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://haokee-git.github.io/algorithm/bin-search-array/</loc>
+         <lastmod>2024-01-12</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://haokee-git.github.io/data-structure/decompose/</loc>
          <lastmod>2024-01-12</lastmod>
          <changefreq>daily</changefreq>

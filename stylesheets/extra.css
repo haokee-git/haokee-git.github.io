@@ -11,8 +11,18 @@
 
 code {
   font-family: "code-font", "p-font" !important;
+  font-size: 12px !important;
+}
+
+.lineos {
+  font-family: "code-font", "p-font" !important;
+  font-size: 12px !important;
 }
 
 body {
   font-family: "p-font" !important;
+}
+
+.MathJax {
+  font-size: 15px !important;
 }
