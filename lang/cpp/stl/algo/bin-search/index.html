@@ -10,28 +10,28 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/data-structure/st-table/">
+        <link rel="canonical" href="https://haokee-git.github.io/lang/cpp/stl/algo/bin-search/">
       
       
-        <link rel="prev" href="../decompose/">
+        <link rel="prev" href="../../../prem/exception/">
       
       
-        <link rel="next" href="../../graph/conception/">
+        <link rel="next" href="../sort/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>ST 表 - haokee-wiki（新年特别版）</title>
+        <title>二分查找 - haokee-wiki（新年特别版）</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +50,9 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#st" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -92,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="haokee-wiki（新年特别版）" class="md-header__button md-logo" aria-label="haokee-wiki（新年特别版）" data-md-component="logo">
+    <a href="../../../../.." title="haokee-wiki（新年特别版）" class="md-header__button md-logo" aria-label="haokee-wiki（新年特别版）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ST 表
+              二分查找
             
           </span>
         </div>
@@ -219,7 +219,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../../../.." class="md-tabs__link">
         
   
     
@@ -238,7 +238,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../start/configure/" class="md-tabs__link">
+        <a href="../../../../../start/configure/" class="md-tabs__link">
           
   
   环境配置
@@ -252,23 +252,29 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../lang/cpp/prem/exception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../prem/exception/" class="md-tabs__link">
           
   
   语言基础
@@ -292,7 +298,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../algorithm/enum/" class="md-tabs__link">
+        <a href="../../../../../algorithm/enum/" class="md-tabs__link">
           
   
   算法基础
@@ -310,7 +316,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../search/conception/" class="md-tabs__link">
+        <a href="../../../../../search/conception/" class="md-tabs__link">
           
   
   搜索
@@ -328,7 +334,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../dp/basic/" class="md-tabs__link">
+        <a href="../../../../../dp/basic/" class="md-tabs__link">
           
   
   动态规划
@@ -342,21 +348,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../monotonic-queue/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../../data-structure/monotonic-queue/" class="md-tabs__link">
           
   
   数据结构
@@ -383,7 +385,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+        <a href="../../../../../graph/conception/" class="md-tabs__link">
           
   
   图论
@@ -410,7 +412,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../tree/conception/" class="md-tabs__link">
+        <a href="../../../../../tree/conception/" class="md-tabs__link">
           
   
   树论
@@ -431,7 +433,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/" class="md-tabs__link">
+        <a href="../../../../../about/" class="md-tabs__link">
           
   
   站点信息
@@ -464,7 +466,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="haokee-wiki（新年特别版）" class="md-nav__button md-logo" aria-label="haokee-wiki（新年特别版）" data-md-component="logo">
+    <a href="../../../../.." title="haokee-wiki（新年特别版）" class="md-nav__button md-logo" aria-label="haokee-wiki（新年特别版）" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -494,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -556,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../start/configure/" class="md-nav__link">
+      <a href="../../../../../start/configure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../start/first-program/" class="md-nav__link">
+      <a href="../../../../../start/first-program/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,8 +604,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -612,14 +616,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -633,7 +635,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             语言基础
@@ -644,21 +646,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
@@ -672,7 +674,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1">
             <span class="md-nav__icon md-icon"></span>
             C++
@@ -725,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/cpp/prem/exception/" class="md-nav__link">
+      <a href="../../../prem/exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -751,21 +753,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1_2" id="__nav_3_1_2_label" tabindex="0">
@@ -779,7 +781,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1_2">
             <span class="md-nav__icon md-icon"></span>
             STL 库
@@ -790,21 +792,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_3_1_2_1" id="__nav_3_1_2_1_label" tabindex="0">
@@ -818,7 +820,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_1_2_1">
             <span class="md-nav__icon md-icon"></span>
             算法库
@@ -829,10 +831,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../lang/cpp/stl/algo/bin-search/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    二分查找
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -841,6 +863,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lower_bound" class="md-nav__link">
+    <span class="md-ellipsis">
+      lower_bound
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upper_bound" class="md-nav__link">
+    <span class="md-ellipsis">
+      upper_bound
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -853,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/cpp/stl/algo/sort/" class="md-nav__link">
+      <a href="../sort/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -921,7 +981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang/cpp/stl/cont/vector/" class="md-nav__link">
+      <a href="../../cont/vector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithm/enum/" class="md-nav__link">
+      <a href="../../../../../algorithm/enum/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1075,7 +1135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithm/bin-search-array/" class="md-nav__link">
+      <a href="../../../../../algorithm/bin-search-array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1096,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithm/bin-search-ans/" class="md-nav__link">
+      <a href="../../../../../algorithm/bin-search-ans/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,7 +1234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/conception/" class="md-nav__link">
+      <a href="../../../../../search/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1234,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/dfs/" class="md-nav__link">
+      <a href="../../../../../search/dfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1312,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dp/basic/" class="md-nav__link">
+      <a href="../../../../../dp/basic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1333,7 +1393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dp/div-con/" class="md-nav__link">
+      <a href="../../../../../dp/div-con/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1354,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dp/bag-dp/" class="md-nav__link">
+      <a href="../../../../../dp/bag-dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,8 +1439,6 @@
       
   
   
-    
-  
   
   
     
@@ -1391,12 +1449,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1410,7 +1470,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             数据结构
@@ -1463,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monotonic-queue/" class="md-nav__link">
+      <a href="../../../../../data-structure/monotonic-queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../decompose/" class="md-nav__link">
+      <a href="../../../../../data-structure/decompose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1557,30 +1617,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    ST 表
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../../data-structure/st-table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1589,62 +1629,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      引入
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法思想
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      代码
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      补充
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1745,7 +1729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../../../../../graph/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1766,7 +1750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../../../../../graph/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+      <a href="../../../../../graph/bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1855,7 +1839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/dijkstra/" class="md-nav__link">
+      <a href="../../../../../graph/dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1876,7 +1860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/floyd/" class="md-nav__link">
+      <a href="../../../../../graph/floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1897,7 +1881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../../../../../graph/johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1918,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../../../../../graph/system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1986,7 +1970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/mst/" class="md-nav__link">
+      <a href="../../../../../graph/mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2007,7 +1991,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/kruskal/" class="md-nav__link">
+      <a href="../../../../../graph/kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2124,7 +2108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tree/conception/" class="md-nav__link">
+      <a href="../../../../../tree/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2145,7 +2129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tree/storage/" class="md-nav__link">
+      <a href="../../../../../tree/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2174,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tree/traversal/" class="md-nav__link">
+      <a href="../../../../../tree/traversal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2195,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tree/lca/" class="md-nav__link">
+      <a href="../../../../../tree/lca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2265,7 +2249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
+      <a href="../../../../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2313,36 +2297,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#lower_bound" class="md-nav__link">
     <span class="md-ellipsis">
-      引入
+      lower_bound
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#upper_bound" class="md-nav__link">
     <span class="md-ellipsis">
-      算法思想
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      代码
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      补充
+      upper_bound
     </span>
   </a>
   
@@ -2367,58 +2333,21 @@
   
 
 
-<h1 id="st">ST 表<a class="headerlink" href="#st" title="Permanent link">&para;</a></h1>
-<h2 id="_1">引入<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<details class="question" open="open">
-<summary>什么是 ST 表？</summary>
-<p>ST 表是一种基于倍增思想、用来解决可重复贡献问题的数据结构。那么什么是可重复贡献问题呢？</p>
-<p>假设现在有一个运算 <span class="arithmatex">\(\operatorname{opt}\)</span>，若 <span class="arithmatex">\(x\operatorname{opt}x\)</span> 正好等于 <span class="arithmatex">\(x\)</span>，那么对应的区间询问就是一个可重复贡献问题。（例如求 <span class="arithmatex">\(a_l\operatorname{opt}a_{l+1}\operatorname{opt}\cdots\operatorname{opt}a_r\)</span>）。比如区间最大值、区间最大公因数。另外，<span class="arithmatex">\(\operatorname{opt}\)</span> 还需要满足结合律：<span class="arithmatex">\(a\operatorname{opt}b\operatorname{opt}c=a\operatorname{opt}(b\operatorname{opt}c)\)</span>，这也是快速幂、线段树等所需要的。</p>
-</details>
-<p>接下来，好渴鹅将会以静态区间最值查询为例子（简称 RMQ，Range Maximum/Minimum Query）来讲述 ST 表的实现。</p>
-<h2 id="_2">算法思想<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>基于 dp 和倍增。</p>
-<p>我们可以将区间拆分成 <span class="arithmatex">\(\log_2\)</span> 个长度为 <span class="arithmatex">\(2^x\)</span> 的块，然后将两个块取最大值合并成一个块，那么这个问题就成了最优子结构问题。设 <span class="arithmatex">\(dp_{i,j}\)</span> 表示为 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(i+2^j-1\)</span> 这个区间内的最大值，那么很显然 <span class="arithmatex">\(dp_{i,0}=a_i\)</span>。那么我们就以 <span class="arithmatex">\(j\)</span> 为拓扑序，然后将长度为 <span class="arithmatex">\(2^j\)</span> 的块划分成两个 <span class="arithmatex">\(2^{(j-1)}\)</span> 的块，那么第一个块的起始位置为 <span class="arithmatex">\(i\)</span>，第二个块的起始位置为 <span class="arithmatex">\(i+2^j\)</span>，取最大值即可。</p>
-<p>然后对于询问，大家可能一下就可以想到将序列长度进行二进制拆解，然后调用之前的 dp 数组，在所有小块中取出最大值。这样做是 <span class="arithmatex">\(\mathcal O(\log_2 n)\)</span> 的，不够优秀。</p>
-<p>事实上，我们取最大值的数组是可以重叠的。我们就直接找到小于序列长度的最大的 <span class="arithmatex">\(\log\)</span> 值，假设为 <span class="arithmatex">\(x\)</span>，然后把 <span class="arithmatex">\(l\)</span> 往后 <span class="arithmatex">\(x\)</span> 位和 <span class="arithmatex">\(r\)</span> 往前 <span class="arithmatex">\(x\)</span> 位取最大值，就行了。<span class="arithmatex">\(\log_2 i\)</span> 可以通过 <span class="arithmatex">\(\mathcal O(n)\)</span> 的预处理快速求出。</p>
-<p>时间复杂度：预处理 + dp <span class="arithmatex">\(\mathcal O(n\log_2 n)\)</span>，询问 <span class="arithmatex">\(\mathcal O(1)\)</span>。</p>
-<h2 id="_3">代码<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<details class="note">
-<summary>代码 - ST 表</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">pre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">log</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">log</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">kMaxN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">log</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">kLog</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">))][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">l</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">max</span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">l</span><span class="p">][</span><span class="n">s</span><span class="p">],</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">r</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">s</span><span class="p">]);</span>
-<span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-</details>
-<h2 id="_4">补充<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>其他求区间最值的方法还有线段树和树状数组，单词询问时间复杂度为 <span class="arithmatex">\(\mathcal O(\log_2 n)\)</span>。与 ST 表不同的是，这两货支持动态修改。这两货也是非常重要的数据结构，在今后的学习过程中好渴鹅会重点讲解。</p>
+<h1 id="_1">二分查找<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="lower_bound">lower_bound<a class="headerlink" href="#lower_bound" title="Permanent link">&para;</a></h2>
+<p>函数原型：</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">_FwdIt</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">_Ty</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">_Pr</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">lower_bound</span><span class="p">(</span><span class="n">_FwdIt</span><span class="w"> </span><span class="n">_First</span><span class="p">,</span><span class="w"> </span><span class="n">_FwdIt</span><span class="w"> </span><span class="n">_Last</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">_Ty</span><span class="o">&amp;</span><span class="w"> </span><span class="n">_Val</span><span class="p">,</span><span class="w"> </span><span class="n">_Pr</span><span class="w"> </span><span class="n">_Pred</span><span class="p">);</span>
+</code></pre></div>
+<p>用途：在 <code>_First</code> 和 <code>_Last</code> 迭代器之间构成的区域内寻找第一个大于等于 <code>_Val</code> 的元素（不包含 <code>_Last</code> 指向的元素），并返回该元素的迭代器。如果没有该元素，则返回 <code>_Last</code>。</p>
+<p>使用之前需排序，查找复杂度 <span class="arithmatex">\(\mathcal O(\log_2 n)\)</span>。</p>
+<h2 id="upper_bound">upper_bound<a class="headerlink" href="#upper_bound" title="Permanent link">&para;</a></h2>
+<p>函数原型：</p>
+<div class="highlight"><pre><span></span><code><span class="k">template</span><span class="w"> </span><span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="nc">_FwdIt</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">_Ty</span><span class="p">,</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">_Pr</span><span class="o">&gt;</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">upper_bound</span><span class="p">(</span><span class="n">_FwdIt</span><span class="w"> </span><span class="n">_First</span><span class="p">,</span><span class="w"> </span><span class="n">_FwdIt</span><span class="w"> </span><span class="n">_Last</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">_Ty</span><span class="o">&amp;</span><span class="w"> </span><span class="n">_Val</span><span class="p">,</span><span class="w"> </span><span class="n">_Pr</span><span class="w"> </span><span class="n">_Pred</span><span class="p">);</span>
+</code></pre></div>
+<p>用途：在 <code>_First</code> 和 <code>_Last</code> 迭代器之间构成的区域内寻找第一个大于 <code>_Val</code> 的元素（不包含 <code>_Last</code> 指向的元素），并返回该元素的迭代器。如果没有该元素，则返回 <code>_Last</code>。</p>
+<p>使用之前需排序，查找复杂度 <span class="arithmatex">\(\mathcal O(\log_2 n)\)</span>。 </p>
 
 
 
@@ -2522,14 +2451,14 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.path", "navigation.expand", "navigation.tracking", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.top", "navigation.path", "navigation.expand", "navigation.tracking", "content.code.copy", "content.code.select", "content.code.annotate"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../../../javascripts/mathjax.js"></script>
       
-        <script src="../../javascripts/mathjax-source.js"></script>
+        <script src="../../../../../javascripts/mathjax-source.js"></script>
       
     
   </body>
