@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/graph/mst/">
+        <link rel="canonical" href="https://haokee-git.github.io/search/bfs/">
       
       
-        <link rel="prev" href="../system-of-difference-constraints/">
+        <link rel="prev" href="../dfs/">
       
       
-        <link rel="next" href="../kruskal/">
+        <link rel="next" href="../pruning/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>定义 - haokee-wiki（新年特别版）</title>
+        <title>广度优先搜索 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              定义
+              广度优先搜索
             
           </span>
         </div>
@@ -306,11 +306,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../search/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   搜索
@@ -369,21 +371,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../conception/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../graph/conception/" class="md-tabs__link">
           
   
   图论
@@ -1176,8 +1174,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1186,14 +1186,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1207,7 +1205,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             搜索
@@ -1221,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/dfs/" class="md-nav__link">
+      <a href="../dfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,10 +1258,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../search/bfs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1272,6 +1279,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1284,7 +1292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/pruning/" class="md-nav__link">
+      <a href="../pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1305,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/meet-in-mid/" class="md-nav__link">
+      <a href="../meet-in-mid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1648,8 +1656,6 @@
       
   
   
-    
-  
   
   
     
@@ -1660,12 +1666,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1679,7 +1687,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -1732,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conception/" class="md-nav__link">
+      <a href="../../graph/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1753,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage/" class="md-nav__link">
+      <a href="../../graph/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bellman-ford/" class="md-nav__link">
+      <a href="../../graph/bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1842,7 +1850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dijkstra/" class="md-nav__link">
+      <a href="../../graph/dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1863,7 +1871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../floyd/" class="md-nav__link">
+      <a href="../../graph/floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1884,7 +1892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../johnson/" class="md-nav__link">
+      <a href="../../graph/johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1905,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system-of-difference-constraints/" class="md-nav__link">
+      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1931,21 +1939,21 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
         
           
           <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
@@ -1959,7 +1967,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8_3">
             <span class="md-nav__icon md-icon"></span>
             最小生成树
@@ -1970,19 +1978,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../graph/mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +1990,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2004,7 +2002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kruskal/" class="md-nav__link">
+      <a href="../../graph/kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2320,16 +2318,68 @@
   
 
 
-<h1 id="-">最小生成树 - 定义<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
-<details class="note" open="open">
-<summary>提示</summary>
-<p>这里是最小生成树的定义，如果您想要学习最小生成树的算法，请转到下面的 Kruskal 或 Prim 算法。</p>
+<h1 id="_1">普通广度优先搜索<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<details class="question" open="open">
+<summary>迷宫问题</summary>
+<p>给定一个 <span class="arithmatex">\(n\times m\)</span> 的迷宫，标为 <code>#</code> 的地方是不能走的墙，标为 <code>.</code> 的地方时是可以走的空地。现在你要从 <span class="arithmatex">\((1,1)\)</span> 走到 <span class="arithmatex">\((n,m)\)</span>，请问最少需要走多少步？（保证有解）</p>
 </details>
-<p class="annotate">对于一个连通图，如果有一个子图（点集相同，边集被包含）满足树形结构，那么这个子图就是这个图的一棵生成树(1)。生成树的大小定义为所有边的权值之和，最小生成树就是所有生成树的权值之和当中最小的那一棵树。</p>
-<ol>
-<li>英文名为 Spanning Tree。最小生成树的英文名为 Minimum Spanning Tree，简称 MST。</li>
-</ol>
-<p>如果这个图不联通，那么我们可以对每一个联通块（强连通分量）分别求出最小生成树之后合并成一个最小生成森林。</p>
+<p>我们可以先考虑深搜：设 <span class="arithmatex">\(f(x,y,s)\)</span> 表示当前在格子 <span class="arithmatex">\((x,y)\)</span>，已经走了 <span class="arithmatex">\(s\)</span> 步，那么接下来就有四个方向可以选择——上左下右。我们可以选择任意一个方向来转移，然后进行递归搜索。如果我们已经搜到了解，不那么我们就与之前的解取最小值，因为题目中已经告诉了我们是最小步数。注意我们需要判断是否已经走出了边界，也就是添加可行性剪枝。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">kD</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">}};</span><span class="w">  </span><span class="c1">// 四个方向</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;#&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">kD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>然后我们发现，如果当前 <span class="arithmatex">\(s\)</span> 已经超过或等于了之前的 <span class="arithmatex">\(ans\)</span> 值，那么就不必要继续搜索了。毕竟步数又不能 <span class="arithmatex">\(-1\)</span>，是不是？</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="n">ans</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<p>虽然这种搜索方法已经看起来很优了，但是我们考虑一种最坏情况——万一我们的深搜最开始就选择了一个错误的方向，然后在错误的地方一直搜了半天都搜不到答案，那么该怎么办？因此，我们在解决这种迷宫问题的时候，不能单单向一个方向搜，而是一层层地一起搜，那么这个问题就解决了。</p>
+<p>这就是广度优先搜索。我们每次搜索的都是一层层地状态，也就是 <span class="arithmatex">\(s\)</span> 一样的状态。这样子到了任意一个格子，最开始经过的肯定是最优的，因此每一个格子就只用经过一次了。时间复杂度就可以降到 <span class="arithmatex">\(\mathcal O(nm)\)</span>。</p>
+<p>至于如何实现，我们就可以使用一个队列，因为队列是先进先出的，而先进来的状态正好就是旧的不要的状态。因此我们只需要将不要的状态从队头弹出，新来的状态从队尾进入就行了。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">record</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 记录一个新状态</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 不要的状态去掉</span>
+<span class="w">    </span><span class="k">return</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w">  </span><span class="c1">// 进入队列</span>
+<span class="w">  </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">// 标记为已到达</span>
+<span class="p">}</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 加入初始状态并不断循环，每一个状态转移完就不用了</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 记录答案</span>
+<span class="w">      </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">s</span><span class="p">;</span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">kD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// 枚举四个方向</span>
+<span class="w">      </span><span class="n">record</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>广度优先搜索跟队列本身是没有什么关系的，只是队列的先进先出机制正好可以满足普通的广度优先搜索，但是并不是所有的广度优先搜索都需要队列。</p>
+</details>
 
 
 

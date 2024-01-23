@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/graph/mst/">
+        <link rel="canonical" href="https://haokee-git.github.io/search/pruning/">
       
       
-        <link rel="prev" href="../system-of-difference-constraints/">
+        <link rel="prev" href="../bfs/">
       
       
-        <link rel="next" href="../kruskal/">
+        <link rel="next" href="../meet-in-mid/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>定义 - haokee-wiki（新年特别版）</title>
+        <title>剪枝 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              定义
+              剪枝
             
           </span>
         </div>
@@ -306,11 +306,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../search/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   搜索
@@ -369,21 +371,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../conception/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../graph/conception/" class="md-tabs__link">
           
   
   图论
@@ -1176,8 +1174,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1186,14 +1186,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1207,7 +1205,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             搜索
@@ -1221,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1242,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/dfs/" class="md-nav__link">
+      <a href="../dfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1263,7 +1261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/bfs/" class="md-nav__link">
+      <a href="../bfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,10 +1279,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../search/pruning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    剪枝
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1293,6 +1311,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      可行性剪枝
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      最优化剪枝
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1305,7 +1361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/meet-in-mid/" class="md-nav__link">
+      <a href="../meet-in-mid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1648,8 +1704,6 @@
       
   
   
-    
-  
   
   
     
@@ -1660,12 +1714,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1679,7 +1735,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -1732,7 +1788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conception/" class="md-nav__link">
+      <a href="../../graph/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1753,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage/" class="md-nav__link">
+      <a href="../../graph/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1821,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bellman-ford/" class="md-nav__link">
+      <a href="../../graph/bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1842,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dijkstra/" class="md-nav__link">
+      <a href="../../graph/dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1863,7 +1919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../floyd/" class="md-nav__link">
+      <a href="../../graph/floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1884,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../johnson/" class="md-nav__link">
+      <a href="../../graph/johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1905,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system-of-difference-constraints/" class="md-nav__link">
+      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1931,21 +1987,21 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
         
           
           <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
@@ -1959,7 +2015,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8_3">
             <span class="md-nav__icon md-icon"></span>
             最小生成树
@@ -1970,19 +2026,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../graph/mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1991,7 +2038,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -2004,7 +2050,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kruskal/" class="md-nav__link">
+      <a href="../../graph/kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2303,6 +2349,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      可行性剪枝
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      最优化剪枝
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2320,16 +2392,14 @@
   
 
 
-<h1 id="-">最小生成树 - 定义<a class="headerlink" href="#-" title="Permanent link">&para;</a></h1>
-<details class="note" open="open">
-<summary>提示</summary>
-<p>这里是最小生成树的定义，如果您想要学习最小生成树的算法，请转到下面的 Kruskal 或 Prim 算法。</p>
-</details>
-<p class="annotate">对于一个连通图，如果有一个子图（点集相同，边集被包含）满足树形结构，那么这个子图就是这个图的一棵生成树(1)。生成树的大小定义为所有边的权值之和，最小生成树就是所有生成树的权值之和当中最小的那一棵树。</p>
-<ol>
-<li>英文名为 Spanning Tree。最小生成树的英文名为 Minimum Spanning Tree，简称 MST。</li>
-</ol>
-<p>如果这个图不联通，那么我们可以对每一个联通块（强连通分量）分别求出最小生成树之后合并成一个最小生成森林。</p>
+<h1 id="_1">剪枝<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">可行性剪枝<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>可行性剪枝的思想较为简单，就是如果当前状态已经无法搜索成功的解了，那么我们就退出搜索。这种剪枝方法在之前的代码里面很常见，比如全排列问题当中判断一个数是否已经选过了，迷宫问题当中判断是否已经走出了迷宫边界。</p>
+<p>使用可行性剪枝需要仔细看题，知道答案需要满足什么条件，然后再在搜索函数里面添加特判，把不合法的状态全部都去掉。注意别把可以产生答案的状态剪掉了。</p>
+<h2 id="_3">最优化剪枝<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>最优化剪枝的思想就是如果当前状态可以搜出解，但是不可能比当前的最优解更优了，那么就退出搜索。例如在迷宫问题当中，第一次遇到的格子必然是最优的，那么之前就已经遇到过的格子就不用搜索了。</p>
+<p>另一种题目是判断是否有解，那么广度优先搜索可以直接 <code>return</code>，但是深度优先搜索里面就必须判断当前是否已经有解了，如果是的话就可以不用继续搜索了。</p>
+<p>迷宫问题里面的 dfs 代码就有个缺陷：可能会死循环，因为我们没有标记格子的最小距离。（注意这里需要标记最小距离，因为 dfs 不想 bfs 那样是一层一层搜的，后面到达的状态可能会比前面的更优）。因此我们只需要加入最小距离数组就可以避免死循环的问题了，但是我们仍然无法保证复杂度，因为一个格子不一定只会遍历一次。所以那题就是一道必须使用广搜的题目了。</p>
 
 
 
