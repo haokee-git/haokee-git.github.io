@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/search/meet-in-mid/">
+        <link rel="canonical" href="https://haokee-git.github.io/graph/prim/">
       
       
-        <link rel="prev" href="../pruning/">
+        <link rel="prev" href="../kruskal/">
       
       
-        <link rel="next" href="../../dp/basic/">
+        <link rel="next" href="../topo/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>折半搜索 - haokee-wiki（新年特别版）</title>
+        <title>Prim 算法 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#prim" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              折半搜索
+              Prim 算法
             
           </span>
         </div>
@@ -306,13 +306,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../conception/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../search/conception/" class="md-tabs__link">
           
   
   搜索
@@ -371,17 +369,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   图论
@@ -1216,8 +1218,6 @@
       
   
   
-    
-  
   
   
     
@@ -1228,12 +1228,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
@@ -1247,7 +1249,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             搜索
@@ -1261,7 +1263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conception/" class="md-nav__link">
+      <a href="../../search/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1282,7 +1284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dfs/" class="md-nav__link">
+      <a href="../../search/dfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,7 +1305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bfs/" class="md-nav__link">
+      <a href="../../search/bfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1324,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pruning/" class="md-nav__link">
+      <a href="../../search/pruning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,30 +1344,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    折半搜索
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../search/meet-in-mid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1374,44 +1356,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      前言
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      算法介绍
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1746,8 +1690,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1756,14 +1702,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1777,7 +1721,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -1830,7 +1774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1851,7 +1795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1919,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+      <a href="../bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1940,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/dijkstra/" class="md-nav__link">
+      <a href="../dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1961,7 +1905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/floyd/" class="md-nav__link">
+      <a href="../floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2003,7 +1947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2029,21 +1973,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_3" checked>
         
           
           <label class="md-nav__link" for="__nav_8_3" id="__nav_8_3_label" tabindex="0">
@@ -2057,7 +2001,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_3">
             <span class="md-nav__icon md-icon"></span>
             最小生成树
@@ -2071,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/mst/" class="md-nav__link">
+      <a href="../mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2092,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/kruskal/" class="md-nav__link">
+      <a href="../kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2110,10 +2054,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../graph/prim/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Prim 算法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2122,6 +2086,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法思想
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2142,7 +2144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/topo/" class="md-nav__link">
+      <a href="../topo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2440,18 +2442,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      前言
+      简介
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      算法介绍
+      算法思想
     </span>
   </a>
   
@@ -2476,66 +2478,32 @@
   
 
 
-<h1 id="_1">折半搜索<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">前言<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>折半搜索并不是一个标准的译名，这种算法原名叫「Meet in the middle」，常见的译名有：折半搜索、中途相遇和双向搜索。</p>
-<h2 id="_3">算法介绍<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<details class="question" open="open">
-<summary>例题</summary>
-<p>给定一个 <span class="arithmatex">\(n\times n\)</span> 的矩阵，你最开始在 <span class="arithmatex">\((1,1)\)</span>，每次你都只能往下面或者右边走。问你有多少种走法使得经过的数他们的异或值正好为 <span class="arithmatex">\(0\)</span>。<span class="arithmatex">\(1\le n\le 40\)</span></p>
-</details>
-<p>这题是方案数的题目，因此我们使用 dfs 来解决。设 <span class="arithmatex">\(f(x,y,s)\)</span> 表示为当前搜到了 <span class="arithmatex">\((x,y)\)</span>，异或值为 <span class="arithmatex">\(s\)</span>。那么对于任意一个格子，可以往下面或者右边，递归解决即可。</p>
+<h1 id="prim">Prim 算法<a class="headerlink" href="#prim" title="Permanent link">&para;</a></h1>
+<h2 id="_1">简介<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Prim 算法是另外一种常见并且十分好写的最小生成树算法。Prim 算法的中心思想和 Kruskal 不同，它是每一次选择一个点，而非像 Kruskal 算法一样每次选择一个点。</p>
+<h2 id="_2">算法思想<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>我们每一次都选择一个距离起始节点最近的一个结点，然后往旁边拓展，更新到结点的距离，接着不断加入生成树当中，最后就能求出一颗最小生成树。跟 Dijkstra 特别像，可以利用距离不断增大的拓扑序来使用二叉堆来快速选择最近的结点。</p>
+<p>朴素算法时间复杂度为 <span class="arithmatex">\(\mathcal O(n^2)\)</span>，加入堆优化之后时间复杂度为 <span class="arithmatex">\(\mathcal O(m\log_2 n)\)</span>，优先队列时间复杂度为 <span class="arithmatex">\(\mathcal O(m\log_2 m)\)</span>。对于 <span class="arithmatex">\(m\approx n^2\)</span> 的题目当中，一般都不会使用 Kruskal 算法，因为 Kruskal 算法比较依赖 <span class="arithmatex">\(m\)</span> 的大小，而 <span class="arithmatex">\(\mathcal O(n^2)\)</span> 的朴素 Prim 更适合求解此类问题。需要注意的是，这时候就别再加堆优化了，不然时间复杂度就会与 Kruskal 一样。</p>
 <details class="note">
 <summary>代码</summary>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">ans</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="o">!</span><span class="n">s</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">y</span><span class="p">]);</span>
-<span class="w">  </span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]);</span>
-<span class="p">}</span>
-</code></pre></div>
-</details>
-<p>但是，这题 <span class="arithmatex">\(1\le n\le 40\)</span>，而每一个状态有两种决策，那么我们的复杂度就达到了 <span class="arithmatex">\(\mathcal O(2^n)\)</span>，无法承受。要是假如 <span class="arithmatex">\(n\)</span> 只有一半，也就是 <span class="arithmatex">\(20\)</span>，那该多好啊。</p>
-<p>仔细思考一下，我们就发现了我们可以从前面和后面各搜索一次，然后在对角线相遇记录答案，那么 <span class="arithmatex">\(n\)</span> 不久砍了一半了吗？因为 <span class="arithmatex">\(x\oplus x=0\)</span>，因此我们可以用 <code>std::unordered_map</code> 记录答案，然后在往回搜索记录答案的时候加上过来的时候同样为 <span class="arithmatex">\(x\)</span> 的数量就行了。</p>
-<details class="note">
-<summary>代码</summary>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unordered_map&gt;</span>
-
-<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">;</span>
-
-<span class="k">const</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="n">kMaxN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-
-<span class="n">ll</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">kMaxN</span><span class="p">][</span><span class="n">kMaxN</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
-<span class="n">unordered_map</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="n">ll</span><span class="o">&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">kMaxN</span><span class="p">][</span><span class="n">kMaxN</span><span class="p">];</span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">s</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">]]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">f</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="p">][</span><span class="n">s</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="k">return</span><span class="p">;</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">)][</span><span class="n">y</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<span class="w">  </span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="n">y</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="p">)],</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ll</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">prim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ans</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">v</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">f</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">f</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">t</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">v</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">to</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">to</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">to</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">v</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">dfs</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<span class="w">  </span><span class="n">dfs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">n</span><span class="p">],</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 </details>
-<p>这就是折半搜索的魅力。</p>
 
 
 

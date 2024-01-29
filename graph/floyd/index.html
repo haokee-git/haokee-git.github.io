@@ -2117,9 +2117,51 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prim 算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    拓扑排序
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2461,7 +2503,7 @@
 <li>Floyd 算法，全名 Floyd-Wallshall，又称为插点法，是一种利用动态规划的思想寻找给定的加权图中多源点之间最短路径的算法，与 Dijkstra 算法类似。该算法名称以创始人之一、<span class="arithmatex">\(1978\)</span> 年图灵奖获得者、斯坦福大学计算机科学系教授罗伯特·弗洛伊德命名。——百度百科</li>
 </ol>
 <h2 id="_2">算法思想<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>设 <span class="arithmatex">\(dp_{(k,i,j)}\)</span> 表示为最短路在只经过 <span class="arithmatex">\(1~k\)</span> 这 <span class="arithmatex">\(k\)</span> 个中转结点的前提下，<span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的最短距离，那么很简单，<span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的最短距离我们就尝试加入中转结点 <span class="arithmatex">\(k\)</span>，也就是把 <span class="arithmatex">\(i\sim k\)</span> 和 <span class="arithmatex">\(k\sim j\)</span> 的路径给拼起来，然后与当前 <span class="arithmatex">\(i\sim j\)</span> 的路径做比较，取最小值。状态转移方程就是 <span class="arithmatex">\(dp_{(k,i,j)}=\min(dp_{(k-1,i,j)},dp_{(k-1,i,k)}+dp_{(k-1,k,j)})\)</span>。</p>
+<p>设 <span class="arithmatex">\(dp_{(k,i,j)}\)</span> 表示为最短路在只经过 <span class="arithmatex">\(1\sim k\)</span> 这 <span class="arithmatex">\(k\)</span> 个中转结点的前提下，<span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的最短距离，那么很简单，<span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的最短距离我们就尝试加入中转结点 <span class="arithmatex">\(k\)</span>，也就是把 <span class="arithmatex">\(i\sim k\)</span> 和 <span class="arithmatex">\(k\sim j\)</span> 的路径给拼起来，然后与当前 <span class="arithmatex">\(i\sim j\)</span> 的路径做比较，取最小值。状态转移方程就是 <span class="arithmatex">\(dp_{(k,i,j)}=\min(dp_{(k-1,i,j)},dp_{(k-1,i,k)}+dp_{(k-1,k,j)})\)</span>。</p>
 <p>然后我们发现，其实每一次我们都从 <span class="arithmatex">\(k-1\)</span> 转移了所有状态到 <span class="arithmatex">\(k\)</span>，那么其实我们可以直接原地修改（压数组），或者按照之前 <a href="../../dp/bag-dp/">动态规划</a> 里面讲解的滚动数组进行优化，那么空间复杂度就可以降成 <span class="arithmatex">\(\mathcal O(n^2)\)</span>。</p>
 <p>注意如果这一个图是双向图的话，那么 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的距离和 <span class="arithmatex">\(j\)</span> 到 <span class="arithmatex">\(i\)</span> 的距离是一样的，因此我们就可以进行优化，省去一半的时间复杂度。</p>
 <details class="note">
@@ -2469,36 +2511,24 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">普通 Floyd</label><label for="__tabbed_1_2">加入压数组优化</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">],</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </div>
 </div>
 </div>
@@ -2512,14 +2542,7 @@
 <p>事实上，我们还可以使用 <code>std::bitset</code> 进行优化，然后对一整个数组全部进行或运算，那么时间复杂度就变成了 <span class="arithmatex">\(\mathcal O(\cfrac{n^3}{w})\)</span>。'</p>
 <details class="note">
 <summary>代码</summary>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">bitset</span><span class="o">&lt;</span><span class="n">kMaxN</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">kMaxN</span><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><span class="n">bitset</span><span class="o">&lt;</span><span class="n">kMaxN</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dp</span><span class="p">[</span><span class="n">kMaxN</span><span class="p">];</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
@@ -2527,7 +2550,7 @@
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+</code></pre></div>
 </details>
 
 
