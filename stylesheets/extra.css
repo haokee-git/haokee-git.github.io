@@ -11,6 +11,7 @@
 code {
   font-family: "code-font", "p-font" !important;
   font-size: 12px !important;
+  font-variant-ligatures: normal !important;
 }
 
 .lineos {
