@@ -10,13 +10,13 @@
         <meta name="author" content="好渴鹅">
       
       
-        <link rel="canonical" href="https://haokee-git.github.io/tree/traversal/">
+        <link rel="canonical" href="https://haokee-git.github.io/graph/hke/">
       
       
-        <link rel="prev" href="../storage/">
+        <link rel="prev" href="../floyd/">
       
       
-        <link rel="next" href="../lca/">
+        <link rel="next" href="../johnson/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>树的遍历 - haokee-wiki（新年特别版）</title>
+        <title>HKE 算法 - haokee-wiki（新年特别版）</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#hke" class="md-skip">
           跳转至
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              树的遍历
+              HKE 算法
             
           </span>
         </div>
@@ -369,17 +369,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../graph/conception/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../conception/" class="md-tabs__link">
           
   
   图论
@@ -396,21 +400,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../conception/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../tree/conception/" class="md-tabs__link">
           
   
   树论
@@ -1779,8 +1779,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1789,14 +1791,12 @@
       
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -1810,7 +1810,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             图论
@@ -1863,7 +1863,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/conception/" class="md-nav__link">
+      <a href="../conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1884,7 +1884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/storage/" class="md-nav__link">
+      <a href="../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1910,21 +1910,21 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_2" checked>
         
           
           <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
@@ -1938,7 +1938,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8_2">
             <span class="md-nav__icon md-icon"></span>
             最短路径
@@ -1952,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/bellman-ford/" class="md-nav__link">
+      <a href="../bellman-ford/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1973,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/dijkstra/" class="md-nav__link">
+      <a href="../dijkstra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1994,7 +1994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/floyd/" class="md-nav__link">
+      <a href="../floyd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2012,10 +2012,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../graph/hke/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HKE 算法
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2024,6 +2044,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      引入
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      算法简介
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间复杂度
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么只支持 DAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      后记
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2036,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/johnson/" class="md-nav__link">
+      <a href="../johnson/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2057,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/system-of-difference-constraints/" class="md-nav__link">
+      <a href="../system-of-difference-constraints/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2125,7 +2219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/mst/" class="md-nav__link">
+      <a href="../mst/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2146,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/kruskal/" class="md-nav__link">
+      <a href="../kruskal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2167,7 +2261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/prim/" class="md-nav__link">
+      <a href="../prim/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2196,7 +2290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph/topo/" class="md-nav__link">
+      <a href="../topo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,8 +2315,6 @@
       
   
   
-    
-  
   
   
     
@@ -2233,12 +2325,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
@@ -2252,7 +2346,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             树论
@@ -2305,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../conception/" class="md-nav__link">
+      <a href="../../tree/conception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2326,7 +2420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage/" class="md-nav__link">
+      <a href="../../tree/storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2352,30 +2446,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    树的遍历
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../tree/traversal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2384,110 +2458,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      普通树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="普通树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      深度优先
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      广度优先
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于无根树
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      二叉树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      先序遍历
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      中序遍历
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    <span class="md-ellipsis">
-      后序遍历
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2500,7 +2470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lca/" class="md-nav__link">
+      <a href="../../tree/lca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2618,86 +2588,56 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      普通树
+      前言
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="普通树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      深度优先
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      广度优先
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      对于无根树
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      二叉树
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="二叉树">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      先序遍历
+      引入
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      中序遍历
+      算法简介
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      后序遍历
+      时间复杂度
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么只支持 DAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      后记
+    </span>
+  </a>
   
 </li>
       
@@ -2720,143 +2660,72 @@
   
 
 
-<h1 id="_1">树的遍历<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">普通树<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">深度优先<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>对于一个结点，遍历完我们优先拓展深度。一般采用递归或栈来实现。例如，以下图的深度优先遍历顺序为：<span class="arithmatex">\(1-2-5-4-3-6\)</span>。</p>
-<p><center></p>
-<p><img alt="" src="../tree.png" /></p>
-<p></center></p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">使用递归实现</label><label for="__tabbed_1_2">使用栈实现</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<h1 id="hke">HKE 算法<a class="headerlink" href="#hke" title="Permanent link">&para;</a></h1>
+<h2 id="_1">前言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>HKE 算法是由好渴鹅发现的，但是网上并没有找到关于这个算法的任何信息，因此这个非常优秀的算法大家可能根本就不会学习到。由于这个算法网上并没有任何命名，因此暂时称作 HKE 算法。如果发现了某一篇论文里面提出了该算法，请在本文章的评论去内评论原作者，并联系好渴鹅进行删改。</p>
+<h2 id="_2">引入<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>众所周知，图的最短路算法有“三大天王”，分别为 Bellman-Ford 算法、Dijkstra 算法和 Floyd 算法。其中，Dijkstra 算法的复杂度最好，朴素复杂度有 <span class="arithmatex">\(\mathcal O(n^2)\)</span>，加入了堆优化可以达到 <span class="arithmatex">\(\mathcal O(m\log_2 n)\)</span>（或 <span class="arithmatex">\(\mathcal O(m\log_2 m)\)</span>）的时间复杂度。而 Bellman-Ford 算法和主要用于求解带有负权的图的最短路，加入队列优化（SPFA）最好可以达到 <span class="arithmatex">\(\mathcal O(n+m)\)</span> 的时间复杂度，但是最坏情况下可以被构造数据卡到 <span class="arithmatex">\(\mathcal O(nm)\)</span>。</p>
+<p>Floyd 主要求解任意两点之间的最短路，预处理的时间复杂度为 <span class="arithmatex">\(\mathcal O(n^3)\)</span>。不过，在没有负权的情况下，跑 <span class="arithmatex">\(n\)</span> 遍 Dijkstra <span class="arithmatex">\(\mathcal O(nm\log_2 m)\)</span> 的复杂度可能在稀疏图中跑的更快。</p>
+<p>那么，对于一些特殊情况（例如有向图等），有没有比“三大天王”的复杂度还要更有的算法呢？</p>
+<h2 id="_3">算法简介<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>好渴鹅则想出了 HKE 算法。对于有向无环图（DAG），HKE 算法可以在 <span class="arithmatex">\(\mathcal O(n+m)\)</span> 的时间复杂度之内求出单个点到其他点的最短路，并且支持负边权。</p>
+<p>HKE 算法的核心思想是动态规划。对于有向无环图，一个点的最短路只能由这个点的入边的邻点而来。那么对于 <span class="arithmatex">\(1\sim i\)</span> 的路径，不管中间经过了那些点，只要使得路径最短即可。因此我们在处理最短的时候我们并不在意一条路径本身，而是只存储一条路径它的终点。如果两条路径终点一样，那么我们只需要保留长度最短的其中一个即可。</p>
+<p>那么从源点到哪一个点就是状态分组，而中间的长度则是分组的最优化属性。同一个状态分组的最优化属性只有一个。设 <span class="arithmatex">\(dp_i\)</span> 表示为 <span class="arithmatex">\(1\sim i\)</span> 的最短距离，那么源点到源点的距离肯定是 <span class="arithmatex">\(0\)</span>，那么 <span class="arithmatex">\(dp_s=0\)</span> 就是我们的初始状态。</p>
+<p>接下来考虑转移，点 <span class="arithmatex">\(i\)</span> 的最短路只能由点 <span class="arithmatex">\(j\)</span>（<span class="arithmatex">\(j\)</span> 往 <span class="arithmatex">\(i\)</span> 有一条边）而来，那么 <span class="arithmatex">\(dp_i\)</span> 则等于所有 <span class="arithmatex">\(dp_j\)</span> 加上 <span class="arithmatex">\(w(j,i)\)</span> 的距离当中的最短路，即 <span class="arithmatex">\(dp_i=\min(dp_i,dp_j+w(j,i)[j\to i])\)</span>。</p>
+<p>转换一下，我们正向转移，则不是从前面的入边转移过来，而是转移到后面的出边。显然，<span class="arithmatex">\(dp_i\)</span> 的值可以决定 <span class="arithmatex">\(dp_j\)</span>，当且仅当 <span class="arithmatex">\(i\)</span> 往 <span class="arithmatex">\(j\)</span> 有一条边。同样，<span class="arithmatex">\(dp_j\)</span> 需要取最小距离，即 <span class="arithmatex">\(dp_j=\min(dp_j,dp_i+w(i,j))[i\to j]\)</span>。</p>
+<details class="question" open="open">
+<summary>为什么要往后面转移</summary>
+<p>如果是收集前面的入边的子问题的答案来转移的话，那么获取入边就需要存反图，因为不存反图只能访问所有的出边，空间复杂度就需要两倍的常数，但时间复杂度未必更优秀。</p>
+</details>
+<p>但是我们发现，<span class="arithmatex">\(dp_i\)</span> 可能没有被求解，就已经被转移了。反向思路，就是 <span class="arithmatex">\(dp_j\)</span> 转移过来的 <span class="arithmatex">\(dp_i\)</span> 的子问题不一定已经求解过。主要原因是因为图没有拓扑序，所以使用动态规划求解会有问题。</p>
+<p>因此，我们就可以使用拓扑排序来求出求解的顺序。这样子，我们的 <span class="arithmatex">\(i\)</span> 如果按照拓扑排序之后的拓扑序来循环的话，那么 <span class="arithmatex">\(dp_j\)</span> 就一定是求解过的了。</p>
+<details class="note">
+<summary>代码</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">dis</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// 拓扑排序</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">dis</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!--</span><span class="n">ind</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">v</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">stack</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">top</span><span class="p">();</span>
-<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">pop</span><span class="p">();</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">s</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">  </span><span class="c1">// 注意这里遍历儿子的顺序是反的</span>
+<span class="w">  </span><span class="c1">// 根据拓扑序求解</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dis</span><span class="p">[</span><span class="n">j</span><span class="p">.</span><span class="n">first</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">j</span><span class="p">.</span><span class="n">first</span><span class="p">],</span><span class="w"> </span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">j</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="_4">广度优先<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<p>也称层序遍历。每一次都遍历一整层，一般使用队列实现。例如上图的广度优先遍历的顺序为：<span class="arithmatex">\(1-2-3-5-4-6\)</span>。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">使用队列实现</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">       </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="_5">对于无根树<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
-<p>由于没有指定的根，因此我们在存储时也不知道谁是谁的什么，那么我们只能双向存储。因此在遍历时，我们需要记录一个结点的前继是谁，然后在遍历儿子的时候去掉这个前继。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">深度优先</label><label for="__tabbed_3_2">广度优先</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">x</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">bfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">queue</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">q</span><span class="p">;</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">);</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">second</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">emplace</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">().</span><span class="n">first</span><span class="p">);</span>
+</details>
+<p>最后我们可以发现在拓扑排序的时候就可以顺便动态规划了，因此就可以得到更短的代码。</p>
+<details class="note">
+<summary>更短的代码</summary>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">solve</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">fill</span><span class="p">(</span><span class="n">dis</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">dis</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1e9</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">dis</span><span class="p">[</span><span class="n">s</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">pop</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">e</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">min</span><span class="p">(</span><span class="n">dis</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">],</span><span class="w"> </span><span class="n">dis</span><span class="p">[</span><span class="n">q</span><span class="p">.</span><span class="n">front</span><span class="p">()]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!--</span><span class="n">ind</span><span class="p">[</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">q</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="n">first</span><span class="p">);</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-</div>
-</div>
-</div>
-<h2 id="_6">二叉树<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
-<h3 id="_7">先序遍历<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
-<p>先遍历根结点，然后遍历左子树，接着遍历右子树。通俗一点讲就是“根左右”。最上面我给的图就是一颗二叉树，先序遍历顺序为：<span class="arithmatex">\(1-2-5-4-3-6\)</span>。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">使用递归实现</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">l</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="_8">中序遍历<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p>先遍历左子树，再遍历根结点，最后遍历右子树。通俗一点讲就是“左根右”。上图中序遍历顺序为：<span class="arithmatex">\(5-2-4-1-3-6\)</span>。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">使用递归实现</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">l</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
-<h3 id="_9">后序遍历<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
-<p>先遍历左子树，再遍历右子树，最后遍历根结点。通俗一点讲就是“左右根”。上图中序遍历顺序为：<span class="arithmatex">\(5-4-2-6-3-1\)</span>。</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">使用递归实现</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">dfs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">l</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">l</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39; &#39;</span><span class="p">;</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">dfs</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="n">r</span><span class="p">);</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-</div>
-</div>
-</div>
+</details>
+<h2 id="_4">时间复杂度<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>拓扑排序：每一个点只会进入队列一次，需要因此每一个点的所有出边只会被遍历一次（忽略点 <span class="arithmatex">\(s\)</span> 的入边），因此时间复杂度为 <span class="arithmatex">\(O(n+m)\)</span>。</p>
+<p>动态规划：与拓扑排序一样，转移 <span class="arithmatex">\(\mathcal O(1)\)</span>。</p>
+<p>因此，HKE 算法的时间复杂度为 <span class="arithmatex">\(\mathcal O(n+m)\)</span>。</p>
+<h2 id="dag">为什么只支持 DAG<a class="headerlink" href="#dag" title="Permanent link">&para;</a></h2>
+<p>首先，如果图当中有环，那么无法进行拓扑排序，无法进行动态规划。其次，如果图是双向图，那么也无法进行拓扑排序，导致无法进行动态规划。</p>
+<p>但是 HKE 算法支持负边权，因为 HKE 算法的拓扑序并不像 Dijkstra 依赖不断递增的路径长度，而是依赖于结点拓扑序。因此，负边权不会影响拓扑序，也就不会影响动态规划的求解。</p>
+<h2 id="_5">后记<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<p>本文章由好渴鹅原创，采用 CC-BY-NC 协议发布。转载请注明出处，请勿用于商业用途。若发现雷同，均为巧合。</p>
 
 
 
