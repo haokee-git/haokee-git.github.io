@@ -239,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../configure/configure/" class="md-tabs__link">
+        <a href="../../configure/brief/" class="md-tabs__link">
           
   
   环境配置
@@ -434,6 +434,24 @@
           
   
   比赛
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../misc/rdm-idx-tr/" class="md-tabs__link">
+          
+  
+  杂项
 
         </a>
       </li>
@@ -644,11 +662,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../../configure/brief/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../configure/configure/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    配置环境
+    配置编译器
   </span>
   
 
@@ -2256,6 +2295,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../data-structure/hash-table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    哈希表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../data-structure/st-table/" class="md-nav__link">
         
   
@@ -2997,7 +3057,7 @@
             
   
   <span class="md-ellipsis">
-    站点信息
+    杂项
   </span>
   
 
@@ -3006,6 +3066,76 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            杂项
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/rdm-idx-tr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    随机访问二叉索引树
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    站点信息
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             站点信息
           </label>
@@ -3138,7 +3268,7 @@
 <span class="p">}</span>
 </code></pre></div>
 </details>
-<p>这代码开起来长，但是它的思路其实非常简单——枚举所有的可能，然后注意判断就行了。但是我们发现，如果 <span class="arithmatex">\(i\)</span> 早就大于等于了 <span class="arithmatex">\(n\)</span>，那么继续枚举下去显然没有了意义，因此我们可以进行优化。其他的循环变量也是如此。</p>
+<p>这代码看起来长，但是它的思路其实非常简单——枚举所有的可能，然后注意判断就行了。但是我们发现，如果 <span class="arithmatex">\(i\)</span> 早就大于等于了 <span class="arithmatex">\(n\)</span>，那么继续枚举下去显然没有了意义，因此我们可以进行优化。其他的循环变量也是如此。</p>
 <details class="note">
 <summary>代码</summary>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
